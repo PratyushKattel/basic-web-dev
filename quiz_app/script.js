@@ -1,3 +1,5 @@
+// const { Children } = require("react");
+
 const quizdata = [
     {
         question: "Which language runs in a web browser?",
@@ -40,7 +42,9 @@ const quizdata = [
         correct: "b",
     }
 ];
-
+let score=0
+let currans=""
+const buttons=document.querySelectorAll('.option-btn')
 const question=document.querySelector('#question-text')
 const optionA = document.getElementById('option-a');
 const optionB = document.getElementById('option-b');
@@ -55,6 +59,38 @@ function loadquiz(){
     optionB.innerText = "B:"+currquestion.b;
     optionC.innerText = "C:"+currquestion.c;
     optionD.innerText = "D:"+currquestion.d;
+    currans=currquestion.correct
 
 }
-loadquiz()
+function selectbtn(e){
+    const selectedbtn=e.target
+    const selectedans=selectedbtn.innerText
+    if(selectedans[0].toLowerCase()===currans){
+        // console.log("correct")
+        score++
+    }
+    else{
+        console.log("wrong")
+    }
+    if (i<quizdata.length-1){
+        i++
+        loadquiz()  }
+    else{
+        gameover()
+        console.log("jo")
+}
+}
+function gameover(){
+    const container=document.querySelector('.container')
+    container.innerHTML='<h2>Your Score is '+score+'/'+quizdata.length+'</h2><button onclick="location.reload()">Reload</button>'
+}
+
+
+
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        selectbtn(e);});
+    });
+    
+    loadquiz()
+    
