@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(131, 118, 118);
+    color: aliceblue;
+}
+button {
+    padding: 8px;
+    margin: 10px;
+    font-size: 14px;
+    border: none;
+    background: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.completed, .completed span{
+        background-color:palegreen;
+        color:dimgrey;
+        text-decoration:line-through;
+        
+}
+.hidden{
+    display: none;
+}
+.visible{
+    display:block
+}
+li {
+    border: 4px dashed pink;
+    border-radius: 10px;
+    margin: 8px;
+    padding: 12px;
+    background-color: bisque;
+}
+
+li span {
+    font-size: 22px;
+    font-weight: 900;
+    padding: 8px;
+    color:black;
+
+}

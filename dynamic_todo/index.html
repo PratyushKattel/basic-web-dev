@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Todo list</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <div class="container">
+        <fieldset>
+    <form id ='views'>
+    <input type="radio" id="all" name="filter" checked>
+    <label for="all">All</label>
+    <input type="radio" id="completed" name="filter">
+    <label for="completed">Completed</label>
+    <input type="radio" id="uncompleted" name="filter">
+    <label for="uncompleted">Uncompleted</label>
+    </form>
+        </fieldset>
+    <ul class="to-do">
+        <li class="uncompleted visible"><button class="done-btn">Done</button><button class="del-btn">Delete</button><span>Dummy Task</span></li>
+    </ul>
+    <input type="text" class="task-input">
+    <button class="add-task" id="add-btn">Add Task</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
