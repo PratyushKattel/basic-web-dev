@@ -3,19 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Clock and counter</title>
+    <title>Digital Clock and Counter</title>
 </head>
 <body>
     <div class="container">
-        <div class="clock">
-            <span id="hours">00</span> :
-            <span id="minutes">00</span> :
-            <span id="seconds">00</span>
-        </div>
-        <div class="counter">
 
+        <!-- Permanent Clock -->
+        <div class="clock">
+            <h3>Current Time</h3>
+            <span id="clock-hours">00</span> :
+            <span id="clock-minutes">00</span> :
+            <span id="clock-seconds">00</span>
         </div>
+
+        <br>
+
+        <!-- Countdown Timer -->
+        <label for="timer">Enter time (minutes)</label>
+        <input id="timer" type="number" min="0" max="100">
+        <button id="submit-btn">Submit</button>
+
+        <div class="counter">
+            <h3>Countdown</h3>
+            <span id="timer-hours">00</span> :
+            <span id="timer-minutes">00</span> :
+            <span id="timer-seconds">00</span>
+        </div>
+
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
