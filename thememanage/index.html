@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form class="theme-form">
+            <label for="theme">Choose a theme:</label>
+            <select id="theme" name="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="solarized">Solarized</option>
+            </select>
+            <input type="submit" value="Apply Theme">
+            <button type="button" id="reset">Reset to Default</button>
+        </form>
+        <div id="container">
+            <p>A simple text</p>
+            <button class="action-btn">Click me</button>
+            <h3>Heading 3</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
